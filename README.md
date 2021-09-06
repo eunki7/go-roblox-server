@@ -1,4 +1,4 @@
-# Go Gin Example 
+# Go Roblox Server RestAPI
 ## Installation
 ```
 $ go get github.com/eunki7/go-roblox-server
