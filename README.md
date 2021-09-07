@@ -19,6 +19,7 @@ Create a **blog database** and import [SQL](https://github.com/eunki7/go-roblox-
 
 You should modify `conf/app.ini`
 
+
 ```
 [database]
 Type = mysql
@@ -42,6 +43,11 @@ IdleTimeout = 200
 $ cd $GOPATH/src/go-roblox-server
 
 $ go run main.go 
+
+[Docker Command]
+
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password --name roblox-mysql -v /home/eunki7/dev/store/mysql/data:/var/lib/mysql mysql:8.0.17 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
 ```
 
 Project information and existing API
