@@ -97,12 +97,12 @@ func (t *Tag) Export() (string, error) {
 	}
 
 	xlsFile := xlsx.NewFile()
-	sheet, err := xlsFile.AddSheet("标签信息")
+	sheet, err := xlsFile.AddSheet("Label Information")
 	if err != nil {
 		return "", err
 	}
 
-	titles := []string{"ID", "名称", "创建人", "创建时间", "修改人", "修改时间"}
+	titles := []string{"ID", "name", "founder", "Creation time", "Modifier", "Change the time"}
 	row := sheet.AddRow()
 
 	var cell *xlsx.Cell
@@ -151,7 +151,7 @@ func (t *Tag) Import(r io.Reader) error {
 		return err
 	}
 
-	rows := xlsx.GetRows("标签信息")
+	rows := xlsx.GetRows("Label Information")
 	for irow, row := range rows {
 		if irow > 0 {
 			var data []string
